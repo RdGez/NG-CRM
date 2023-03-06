@@ -1,0 +1,89 @@
+<div class="row animated fadeIn fast">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4>Usuarios</h4>
+                <div class="alert alert-info" role="alert" *ngIf="usuarios.length === 0">
+                    <p class="mb-0">No hay usuarios con ese termino.</p>
+                </div>
+
+                <div class="table-responsive" *ngIf="usuarios.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Avatar</th>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let usuario of usuarios">
+                                <td>
+                                    <img [src]="usuario.img | imagen: 'usuarios'" class="w50">
+                                </td>
+                                <td>{{ usuario.nombre }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4>Medicos</h4>
+                <div class="alert alert-info" role="alert" *ngIf="medicos.length === 0">
+                    <p class="mb-0">No hay medicos con ese termino.</p>
+                </div>
+
+                <div class="table-responsive" *ngIf="medicos.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Avatar</th>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let medico of medicos">
+                                <td>
+                                    <img [src]="medico.img | imagen: 'medicos'" class="w50">
+                                </td>
+                                <td>{{ medico.nombre }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4>Hospitales</h4>
+                <div class="alert alert-info" role="alert" *ngIf="hospitales.length === 0">
+                    <p class="mb-0">No hay hospitales con ese termino.</p>
+                </div>
+
+                <div class="table-responsive" *ngIf="hospitales.length > 0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Avatar</th>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let hospital of hospitales">
+                                <td>
+                                    <img [src]="hospital.img | imagen: 'hospitales'" class="w50">
+                                </td>
+                                <td>{{ hospital.nombre }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
